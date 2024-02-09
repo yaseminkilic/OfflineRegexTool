@@ -8,7 +8,7 @@
       "properties": {
         "BuildVersion": {
           "type": "string",
-          "description": "Build version - Default is '0.1.0'"
+          "description": "Build number override"
         },
         "Configuration": {
           "type": "string",
@@ -21,6 +21,10 @@
         "Continue": {
           "type": "boolean",
           "description": "Indicates to continue a previously failed build attempt"
+        },
+        "CounterCode": {
+          "type": "string",
+          "description": "Counter code: will replace <!-- Web Counter here -->"
         },
         "DockerLogin": {
           "type": "string",
@@ -45,6 +49,7 @@
             "AppVeyor",
             "AzurePipelines",
             "Bamboo",
+            "Bitbucket",
             "Bitrise",
             "GitHubActions",
             "GitLab",
@@ -140,10 +145,6 @@
             "Quiet",
             "Verbose"
           ]
-        },
-        "YandexCounterCode": {
-          "type": "string",
-          "description": "Yandex Counter code: will replace <!-- Yandex Counter here -->"
         }
       }
     }

@@ -13,7 +13,7 @@ BUILD_PROJECT_FILE="$SCRIPT_DIR/build/_build.csproj"
 TEMP_DIRECTORY="$SCRIPT_DIR//.nuke/temp"
 
 DOTNET_GLOBAL_FILE="$SCRIPT_DIR//global.json"
-DOTNET_INSTALL_URL="https://dot.net/v1/dotnet-install.sh"
+DOTNET_INSTALL_URL="D:\Users\GitRepository\Blazor\blazor-wasm-test-012020\build.sh"      
 DOTNET_CHANNEL="Current"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

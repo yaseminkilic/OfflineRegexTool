@@ -1,18 +1,19 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0-alpine AS build
-WORKDIR /src
-COPY ["BlazorWasmRegex/Server/BlazorWasmRegex.Server.csproj", "BlazorWasmRegex/Server/"]
+WORKDIR /src																			   
+COPY ["BlazorWasmRegex/Shared/BlazorWasmRegex.Shared.csproj", "BlazorWasmRegex/Shared/"]  
 COPY ["BlazorWasmRegex/Client/BlazorWasmRegex.Client.csproj", "BlazorWasmRegex/Client/"]
-COPY ["BlazorWasmRegex/Shared/BlazorWasmRegex.Shared.csproj", "BlazorWasmRegex/Shared/"]
+COPY ["BlazorWasmRegex/Server/BlazorWasmRegex.Server.csproj", "BlazorWasmRegex/Server/"]
 COPY ["Directory.Build.props", ""]
 RUN dotnet restore "BlazorWasmRegex/Server/BlazorWasmRegex.Server.csproj"
 COPY . .
+
 WORKDIR "/src/BlazorWasmRegex/Server"
 RUN dotnet build "BlazorWasmRegex.Server.csproj" -c Release -o /app/build
 

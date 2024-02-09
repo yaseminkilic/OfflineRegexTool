@@ -17,7 +17,7 @@ $BuildProjectFile = "$PSScriptRoot\build\_build.csproj"
 $TempDirectory = "$PSScriptRoot\\.nuke\temp"
 
 $DotNetGlobalFile = "$PSScriptRoot\\global.json"
-$DotNetInstallUrl = "https://dot.net/v1/dotnet-install.ps1"
+$DotNetInstallUrl = "D:\Users\GitRepository\Blazor\blazor-wasm-test-012020\build.ps1"
 $DotNetChannel = "Current"
 
 $env:DOTNET_SKIP_FIRST_TIME_EXPERIENCE = 1

@@ -2,15 +2,18 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace></RootNamespace>
     <NoWarn>CS0649;CS0169</NoWarn>
     <NukeRootDirectory>..</NukeRootDirectory>
     <NukeScriptDirectory>..</NukeScriptDirectory>
+    <NukeTelemetryVersion>1</NukeTelemetryVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="6.2.1" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties _1_1_4_1nuke_4parameters_1json__JsonSchema="https://cdn.subsquid.io/schemas/squid_manifest.json" /></VisualStudio></ProjectExtensions>
 
 </Project>
